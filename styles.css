@@ -1,0 +1,347 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #f0f0f0;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background: #222;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: gold;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+nav a.active,
+nav a:hover {
+  background: gold;
+  color: #000;
+}
+.page-section {
+  display: none;
+  padding: 20px 0;
+}
+
+.page-section.active {
+  display: block;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  color: gold;
+}
+
+.search-section {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.search-box {
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+
+.search-box button {
+  padding: 10px 15px;
+  background: orange;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-box button:hover {
+  background: darkorange;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  background: #222;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.movie-info {
+  margin-top: 10px;
+  flex-grow: 1;
+}
+
+.movie-info h3 {
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: gold;
+}
+
+.movie-info p {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.movie-card button {
+  margin-top: auto;
+  padding: 8px;
+  background: steelblue;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.movie-card button:hover {
+  background: darkblue;
+}
+
+.review-card {
+  background: #222;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.review-card h3 {
+  margin-bottom: 8px;
+  color: gold;
+}
+
+.review-rating {
+  margin: 10px 0;
+  color: gold;
+}
+
+.review-card button {
+  margin-right: 10px;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-review {
+  background: steelblue;
+  color: #fff;
+}
+
+.delete-review {
+  background: crimson;
+  color: #fff;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #222;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close:hover {
+  color: #fff;
+}
+
+#modal-title {
+  color: gold;
+  margin-bottom: 10px;
+}
+
+#modal-poster {
+  width: 100px;
+  margin: 10px 0;
+}
+
+.stars {
+  margin: 10px 0;
+}
+
+.star {
+  font-size: 24px;
+  cursor: pointer;
+  color: #555;
+}
+
+.star.active {
+  color: gold;
+}
+
+.review-text {
+  width: 100%;
+  height: 80px;
+  margin: 10px 0;
+}
+
+.char-count {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.save-btn {
+  width: 100%;
+  padding: 10px;
+  background: orange;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.save-btn:hover {
+  background: darkorange;
+}
+
+.recent-searches {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.recent-searches li {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px 10px;
+  background: #222;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.recent-searches li:hover {
+  background: gold;
+  color: #000;
+}
+.spinner {
+  border: 4px solid rgba(255,255,255,0.08);
+  border-top: 4px solid gold;
+  border-radius: 50%;
+  width: 52px; height: 52px;
+  margin: 36px auto;
+  animation: spin 0.9s linear infinite;
+}
+@keyframes spin { 0%{transform:rotate(0)} 100%{transform:rotate(360deg)} }
+footer {
+  background: #222;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box input,
+  .search-box button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .movie-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-content {
+    padding: 15px;
+  }
+}
+

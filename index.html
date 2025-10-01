@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineSins - Movie Reviews</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="container header-content">
+      <a href="#" class="logo"><i class="fa-solid fa-film"></i> CineSins</a>
+      <nav>
+        <ul>
+          <li><a href="#" data-section="home" class="active">Home</a></li>
+          <li><a href="#" data-section="reviews">My Reviews</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home -->
+  <section id="home" class="page-section active">
+    <div class="search-section">
+      <div class="container">
+        <h1>Discover & Review Movies</h1>
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="Search for a movie...">
+          <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <h2 class="section-title">Popular Movies</h2>
+      <div id="movie-results" class="movie-grid"></div>
+    </div>
+    <div class="recent-searches">
+      <h3>Recent Searches</h3>
+      <ul id="recent-list"></ul>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section id="reviews" class="page-section">
+    <div class="container">
+      <h2 class="section-title">My Reviews</h2>
+      <div id="reviews-list"></div>
+    </div>
+  </section>
+
+  <!-- Review Modal -->
+  <div id="review-modal" class="modal">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <h2 id="modal-title"></h2>
+      <img id="modal-poster" src="" alt="Poster">
+      <div class="rating-system">
+        <p>Rate this movie:</p>
+        <div id="star-container"></div>
+        <p>Your review:</p>
+        <textarea id="review-text" maxlength="300"></textarea>
+        <div id="char-count">0/300</div>
+        <button id="save-review" class="save-btn">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 CineSins</p>
+  </footer>
+</body>
+</html>
